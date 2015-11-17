@@ -1,9 +1,22 @@
+/*
+ * CS 5372 - Design and Specification of Real-Time Systems
+ * Instructor: Salamah I. Salamah, Ph. D.
+ * 
+ * Final Project: Movement Sensor
+ * Presentation due: 11/30/2015
+ * 
+ * Team members:
+ * Upama Rahman
+ * Chris Mckye
+ * Julio Corral
+ * Ernesto Vazquez
+ */
 #include <vxWorks.h>
 #include <stdio.h>
 #include <taskLib.h>
 #include <sysLib.h>
 #include <msgQLib.h>
-#include <semMLib.h>
+#include <semLib.h>
 
 /* Constants */
 #define MSG_Q_MAX_LENGTH 20
@@ -12,6 +25,19 @@
 FILE *shared_file;
 MSG_Q_ID msgQ;
 SEM_ID mutex;
+int sensor_task, log_task, print_task; 
+
+void sensor(){
+	
+}
+
+void logToFile(){
+	
+}
+
+void printtxtlog(){
+	
+}
 
 void Init(){
 	/* Initialize elements */
