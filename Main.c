@@ -36,7 +36,31 @@ void logToFile(){
 }
 
 void printtxtlog(){
+
+	  int fd,x,i;
+	  x=5;
+for (i=0; i < x; i++){	
+	  char filechar;
+	fd = open("/WindRiver/workspace/devProject/logtxt.txt", O_RDONLY, 0);
 	
+	if(fd==ERROR)
+	{
+		printf("error");
+		close(fd);
+		return;
+	}else {
+		
+		printf("File descriptor: %d\n",fd);
+		while(read(fd,&filechar,1)!=0)
+		       printf("%c",filechar);
+		  printf("\n");
+	}
+	
+}
+	close(fd);
+	  return;
+  // taskDelay(1000); // delay it enought time so new content can be written and after written, release the semaphore.
+  	
 }
 
 void Init(){
